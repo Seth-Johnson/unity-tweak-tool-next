@@ -1,0 +1,131 @@
+unity-tweak-tool (0.0.7) xenial; urgency=medium
+
+  [ Andrew Starr-Bochicchio ]
+  * debian/rules: Some minor style tweaks.
+  * debian/control:
+   - Bump Standards-Version to 3.9.5
+   - Build depend on python3-all to fix FTBFS (LP: #1282274).
+  [ J Phani Mahesh]
+  * New upstream release
+    - Update Translations from Launchpad
+  * UnityTweakTool/section/spaghetti/compiz.py:
+    - Fix crash on start (LP: #1281132).
+
+  [ Barneedhar Vigneshwar]
+  * UnityTweakTool/section/system.py
+    - Fixed missing schema- org.gnome.settings-daemon.peripherals (LP: #1490154)
+
+  [ Seth Johnson ]
+  * UnityTweakTool/section/unity.py
+    - Added support for moving the launcher to the bottom of the screen
+  * UnityTweakTool/section/windowmanager.py
+    - Add raise on click feature
+  * Rebuilt pot files
+  * setup.py 
+    - Fix missing header icons (LP: 1467211)
+  * New upstream release (closes LP: #1562049) 
+
+ -- Seth Johnson <sethj0438@gmail.com>  Sun, 27 Mar 2016 21:22:06 -0700
+
+unity-tweak-tool (0.0.6) saucy; urgency=high
+
+  [ Barneedhar Vigneshwar]
+  * New upstream bug-fix only release (LP: #1235752)
+    - Trigger new build of pot files
+  * UnityTweakTool/section/spaghetti/unity.py
+    - unity-tweak-tool crashed with signal 5 in g_settings_get_value() (LP: #1235432)
+
+  [ J Phani Mahesh]
+  * UnityTweakTool/__init__.py
+    - Fix NameError: name '_formatter' is not defined (LP: #1232515)
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Sat, 05 Oct 2013 22:45:24 +0530
+
+unity-tweak-tool (0.0.5) saucy; urgency=low
+
+  [ J Phani Mahesh ]
+  * New upstream release (LP: #1226059)
+    - New application icon 
+    - Show error dialog when schemas are missing instead of crashing
+    - Trigger new build of pot files
+  * UnityTweakTool/section/unity.py
+    - Fix Show recently used and more suggestions in dash search (LP: #1166294)
+    - Fix Launcher reveal sensitivity scale update issues (LP: #1168863)
+  * UnityTweakTool/elements/colorchooser.py
+    - Fix TypeError in get_rgba() (LP: #1165627)
+    - Fix segmentation fault on selecting custom launcher (LP: #1190398)
+  * UnityTweakTool/elements/option.py
+    - Fix "Restore defaults" button (LP: #1186634)
+  * UnityTweakTool/__init__.py  
+    - Fix unity-tweak-tool crashed with dbus.exceptions.DBusException in
+    call_blocking() (LP: #1168738)
+    - Fix FileNotFoundError (LP: #1225463)
+    - Fix dbus.exceptions.DBusException (LP: #1170571)
+  * data/unity.ui
+    - Remove Panel transparency switch (LP: #1168836)
+    - Remove Launcher transparency switch (LP: #1168834)
+
+  [ Barneedhar Vigneshwar ]
+  * UnityTweakTool/section/unity.py
+    - Fix 'Can't set background blur to static' (LP: #1167343)
+    - Fix non-working Launcher only on primary desktop (LP: #1173977)
+  * UnityTweakTool/section/sphagetti/compiz.py
+    - Fix TypeError in color_to_hash() (LP: #1166884)
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Mon, 16 Sep 2013 19:34:38 +0530
+
+unity-tweak-tool (0.0.4) raring; urgency=medium
+
+  [ Barneedhar Vigneshwar ]
+  * New upstream release (LP: #1165141)
+  * data/windowmanager.ui
+    - Fix missing signal in the auto-raise switch (LP: #1160782)
+  * UnityTweakTool/section/sphagetti/theme.py
+    - Fix KeyError when fetching window themes (LP: #1146122)
+  * UnityTweakTool/section/unity.py
+    - Fix show-desktop switch (LP: #1156266)
+    - Fix 'switch between workspace' switch (LP: #1156236)
+
+  [ J Phani Mahesh ]
+  * debian/source_unity-tweak-tool.py  
+    - Update Apport hook to file crash bugs against the package by default
+  * setup.py
+    - Install translated pot files
+  * unity-tweak-tool
+    - Fixed and renamed -r parameter to --reset-unity in the wrapper
+  * UnityTweakTool/__init__.py
+    - Prevent multiple instances using dbus
+  * UnityTweakTool/elements/radio.py
+    - Fix AssertionError in __init__() (LP: #1156201)
+    - Fix AssertionError due to missing overlay-scrollbar package (LP: #1156337)
+  * UnityTweakTool/section/sphagetti/compiz.py
+    - Fix resetting transparency values (LP: #1099067)
+  * UnityTweakTool/section/sphagetti/unity.py
+    - Fix AttributeError in refresh(): 'NoneType' object has no attribute 'get_boolean' (LP: #1155331)
+
+  [Sam Hewitt]
+  * debian/control
+    - Added dependency on python3-cairo (LP: #1156789)
+  * UnityTweakTool/section/sphagetti/unity.py
+    - Fixed unresponsive 'battery-life' switch (LP: #1129262)
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Fri, 05 Apr 2013 23:05:49 +0530
+
+unity-tweak-tool (0.0.3) raring; urgency=low
+
+  * New upstream release
+  * Closes needs-packaging bug (LP: #1126433)
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Fri, 15 Feb 2013 20:33:41 +0530
+
+unity-tweak-tool (0.0.2) raring; urgency=low
+
+  * New upstream release
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Fri, 11 Jan 2013 14:30:53 +0530
+
+unity-tweak-tool (0.0.1) raring; urgency=low
+
+  * Initial release.
+
+ -- Barneedhar Vigneshwar <barneedhar@ubuntu.com>  Sun, 24 Dec 2012 16:48:06 +0530
